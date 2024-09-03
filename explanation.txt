@@ -1,0 +1,54 @@
+/Cinematch
+├── backend/                # Sunucu tarafı, API ve veritabanı bağlantıları için
+│   ├── app.py              # Ana backend dosyası (Flask, FastAPI vb. için giriş noktası)
+│   ├── api/                # API endpoint dosyaları
+│   │   ├── user.py         # Kullanıcı ile ilgili API işlemleri
+│   │   └── movies.py       # Film ile ilgili API işlemleri
+│   ├── services/           # İş mantığı ve veritabanı işlemleri
+│   │   └── user_service.py # Kullanıcı işlemleri
+│   ├── config/             # Uygulama konfigürasyon dosyaları
+│   │   └── config.py       # Veritabanı bağlantı ayarları
+│   └── migrations/         # Veritabanı güncellemeleri için migration dosyaları
+│       └── versions/       # Migration versiyon dosyaları
+│
+├── frontend/               # Web ve mobil istemcilerin arayüz kodları
+│   ├── web/                # Web uygulaması için HTML, CSS, JS dosyaları
+│   │   ├── templates/      # HTML dosyaları
+│   │   │   └── index.html  # Ana sayfa HTML dosyası
+│   │   └── static/         # CSS ve JavaScript dosyaları
+│   ├── mobile/             # BeeWare ile geliştirilen mobil uygulama dosyaları
+│   │   ├── app.py          # BeeWare ana mobil uygulama dosyası
+│   │   ├── views/          # Uygulama ekranları ve arayüz yönetimi
+│   │   │   ├── home_view.py # Ana ekran kodları
+│   │   │   └── profile_view.py # Profil ekranı kodları
+│   │   └── resources/      # Görseller ve ikonlar
+│   │       └── icons/      # Uygulama ikonları
+│
+├── data/                   # Veri kazıma ve veri işleme ile ilgili kodlar
+│   ├── scraping/           # Veri kazıma işlemleri
+│   │   └── scrape_imdb.py  # IMDb veri kazıma skripti
+│   ├── cleaning/           # Veri temizleme ve işleme işlemleri
+│   │   └── clean_data.py   # Veri temizleme kodları
+│   └── datasets/           # Veri setleri
+│   │   └── movies.csv      # Filmlerle ilgili ham veri seti
+│   └── models/             # Verilerle ilgili modeller
+│       └── user_model.py   # Kullanıcı modeli
+│
+├── docs/                   # Proje belgeleri ve raporlar
+│   ├── design/             # Tasarım dokümanları ve arayüz taslakları
+│   │   └── ui_mockup.png   # Arayüz taslak görseli
+│   ├── technical/          # Teknik belgeler ve API dokümantasyonları
+│   │   └── architecture.md # Mimari açıklamalar
+│   └── user_manual/        # Kullanıcı kılavuzları
+│       └── guide.md        # Kullanım rehberi
+│
+├── tests/                  # Test senaryoları ve dosyaları
+│   ├── unit/               # Birim testleri
+│   │   └── test_user_model.py # Kullanıcı modeli için birim testi
+│   ├── integration/        # Entegrasyon testleri
+│   │   └── test_api.py     # API entegrasyon testi
+│   └── e2e/                # Uçtan uca testler
+│       └── test_e2e.py     # Uçtan uca senaryo testi
+│
+├── requirements.txt        # Gerekli Python kütüphaneleri
+└── README.md               # Proje hakkında bilgi ve kullanım kılavuzu
