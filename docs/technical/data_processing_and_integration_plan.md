@@ -2,47 +2,47 @@
 
 ## 1. Veri Çekme
 
-**Açıklama**: IMDb'den gerekli verilerin kazınması.
+**Açıklama**: Netflix veri setinin Kaggle'dan elde edilmesi.
 
-- **Dosya**: `data/scraping/scrape_imdb.py`
+- **Dosya**: `data/datasets/netflix_data.csv`
 - **İşlemler**:
-  - IMDb API veya web scraping teknikleri ile film verilerini çek.
-  - Kullanıcı yorumları, film detayları ve diğer gerekli verileri topla.
-  - Veriyi JSON veya CSV formatında sakla.
+  - Kaggle'dan Netflix veri seti indirilmiştir.
+  - Veri CSV formatında saklanmıştır.
 
-**Hedef**: Güncel ve kapsamlı film verisi toplamak.
+**Hedef**: Güncel ve kapsamlı Netflix verisini elde etmek.
 
 ## 2. Veri Temizleme
 
-**Açıklama**: Çekilen verilerin temizlenmesi ve işlenmesi.
+**Açıklama**: Kaggle'dan elde edilen Netflix verisinin temizlenmesi ve işlenmesi.
 
 - **Dosya**: `data/cleaning/clean_data.py`
 - **İşlemler**:
-  - Eksik, hatalı veya tutarsız verileri tespit et ve düzelt.
-  - Verileri uygun formatlarda (örneğin, tarih formatı, metin temizliği) düzenle.
-  - Gereksiz verileri temizle ve veri setini optimize et.
+  - Eksik, hatalı veya tutarsız veriler tespit edilmiş ve düzeltilmiştir.
+  - Veriler uygun formatlarda düzenlenmiştir (örneğin, tarih formatı, metin temizliği).
+  - Gereksiz veriler temizlenmiş ve veri seti optimize edilmiştir.
+  - Özellikle süre (`duration`) ve tarih (`date_added`) alanlarında dönüşüm işlemleri yapılmıştır.
 
 **Hedef**: Veriyi analiz ve kullanım için uygun hale getirmek.
 
 ## 3. Veritabanı Tasarımı
 
-**Açıklama**: MySQL veritabanının tasarlanması ve yapılandırılması.
+**Açıklama**: Veritabanının tasarlanması ve yapılandırılması. MySQL ve PostgreSQL arasında karar verilecektir.
 
 - **Dosya**: `backend/config/config.py`
 - **İşlemler**:
-  - Veritabanı şeması oluştur: film tablosu, kullanıcı tablosu, yorum tablosu vs.
-  - Tablolar arasındaki ilişkileri tanımla (örneğin, film-yorum ilişkisi).
-  - MySQL veritabanını yapılandır ve bağlantı ayarlarını yap.
+  - Veritabanı şeması oluşturulacaktır: film tablosu, kullanıcı tablosu, yorum tablosu vs.
+  - Tablolar arasındaki ilişkiler tanımlanacaktır (örneğin, film-yorum ilişkisi).
+  - Seçilen veritabanına (MySQL veya PostgreSQL) bağlı olarak yapılandırma ve bağlantı ayarları yapılacaktır.
 
 **Hedef**: Verilerin verimli ve güvenli bir şekilde saklanmasını sağlamak.
 
 ## 4. Veri Yükleme
 
-**Açıklama**: Temizlenmiş verilerin MySQL veritabanına yüklenmesi.
+**Açıklama**: Temizlenmiş Netflix verilerinin veritabanına yüklenmesi.
 
 - **İşlemler**:
-  - Temizlenmiş veriyi SQL INSERT komutlarıyla veya veritabanı kütüphanesi aracılığıyla yükle.
-  - Veri yükleme işlemi için bir script oluştur ve test et.
+  - Temizlenmiş veri SQL INSERT komutlarıyla veya veritabanı kütüphanesi aracılığıyla yüklenmiştir.
+  - Veri yükleme işlemi için bir script oluşturulmuş ve test edilmiştir.
 
 **Hedef**: Verinin veritabanına sorunsuz bir şekilde yüklenmesini sağlamak.
 
@@ -52,9 +52,9 @@
 
 - **Dosyalar**: `backend/api/`, `backend/services/`
 - **İşlemler**:
-  - API endpoint'lerini oluştur: film verisi çekme, kullanıcı profili güncelleme vs.
-  - API ile veritabanı arasındaki veri alışverişini yönet.
-  - API güvenliğini ve performansını sağla.
+  - API endpoint'leri oluşturulmuştur: film verisi çekme, kullanıcı profili güncelleme vs.
+  - API ile veritabanı arasındaki veri alışverişi yönetilmiştir.
+  - API güvenliği ve performansı sağlanmıştır.
 
 **Hedef**: API aracılığıyla veritabanına erişim ve veri işlemenin sorunsuz çalışmasını sağlamak.
 
@@ -75,8 +75,8 @@
 **Açıklama**: İlk veriyi çektikten ve sistemi test ettikten sonra gerekli iyileştirmelerin yapılması.
 
 - **İşlemler**:
-  - Performans iyileştirmeleri yap.
-  - Kullanıcı geri bildirimlerine göre düzenlemeler yap.
-  - Yeni özellikler ekle ve mevcut işlevleri geliştirmeye devam et.
+  - Performans iyileştirmeleri yapılacaktır.
+  - Kullanıcı geri bildirimlerine göre düzenlemeler yapılacaktır.
+  - Yeni özellikler eklenmeye ve mevcut işlevler geliştirmeye devam edilecektir.
 
 **Hedef**: Projeyi sürekli olarak iyileştirmek ve kullanıcı deneyimini artırmak.
